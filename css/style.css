@@ -1,0 +1,243 @@
+* { 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-o-user-select: none; 
+	user-select: none;
+}
+body {
+	background: url(../Images/default.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+}
+#bg {
+	position: absolute;
+	background-image: url(../Images/default.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	transition: 0.5s ease-in-out all;
+}
+
+.main {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: auto;
+}
+
+.searchbar {
+	position: relative;
+	top: 25vh;
+	height: 10%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#search {
+	-webkit-user-select: text; 
+	-khtml-user-select: text; 
+	-moz-user-select: text; 
+	-o-user-select: text; 
+	user-select: text; 
+	margin: auto;
+	width: 60%;
+	font-family: Century Gothic;
+	font-size: 4vh;
+	color: transparent;
+	text-align: center;
+	border: none;
+	background-color: transparent;
+	transition: 0.5s ease-in-out all;
+}
+
+.bar {
+	display: block;
+	margin: 0 auto;
+	height: 0.5vh;
+	width: 60%; 
+	text-align: center;
+	background: transparent;
+	transition: 0.5s ease-in-out all;
+}
+
+#search:focus {
+	color: #fff;
+	width: 90%;
+	outline: none;
+}
+
+#search:focus ~ .bar {
+	width: 90%;
+	background: linear-gradient(90deg, #e1b0c2, #ffbaf2, #e1b0c2);
+}
+.wrapper {
+	position: relative;
+	top: 25vh;
+	height: 65vh;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	overflow: hidden;
+}
+.wrapper > div {
+	position: absolute;
+	transition: 0.5s ease-in-out all;
+}
+#sooyoung {
+	left: 15vw;
+	height: 100%;
+	width: 15%;
+}
+#sooyoung .links {
+	top: 12vh;
+	left: -8vw;
+}
+#jessica {
+	top: 11vh;
+	left: 26vw;
+	height: 100%;
+	width: 12%;
+}
+#jessica .links {
+	top: 12vh;
+	left: -9vw;
+}
+#yuri {
+	top: 3vh;
+	left: 37vw;
+	height: 30%;
+	width: 9%;
+}
+#yuri .links {
+	top: -3vh;
+	left: -6vw;
+}
+#tiffany {
+	top: 23vh;
+	left: 37vw;
+	height: 100%;
+	width: 9%;
+}
+#tiffany .links {
+	top: 18vh;
+	left: 7vw;
+}
+#seohyun {
+	top: 1.5vh;
+	left: 45vw;
+	height: 50%;
+	width: 9%;
+}
+#seohyun .links {
+	top: 13vh;
+	left: -7vw;
+}
+#taeyeon {
+	top: 24vh;
+	left: 52vw;
+	height: 100%;
+	width: 11%;
+}
+#taeyeon .links {
+	top: 15vh;
+	left: -9vw;
+}
+#yoona {
+	top: 1.5vh;
+	left: 55vw;
+	height: 42%;
+	width: 9%;
+}
+#yoona .links {
+	top: 15vh;
+	left: 8vw;
+}
+#sunny {
+	top: 1.5vh;
+	left: 62vw;
+	height: 100%;
+	width: 9%;
+}
+#sunny .links {
+	top: 24vh;
+	left: 9vw;
+}
+#hyoyeon {
+	top: 8vh;
+	left: 70vw;
+	height: 100%;
+	width: 12%;
+}
+#hyoyeon .links {
+	top: 5vh;
+	left: 10vw;
+}
+.links {
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	white-space: nowrap;
+	opacity: 0;
+	transition: 0.5s ease-in-out all;
+	visibility: hidden;
+}
+.links h1 {
+	color: #fff;
+	font-family: Century Gothic;
+	text-decoration: underline;
+	font-size: 2vh;
+	font-weight: 500;
+	margin: 0;
+}
+.links a {
+	font-family: Century Gothic;
+	font-size: 2vh;
+	text-decoration: none;
+	color: #fff;
+}
+.links a:before {
+	content: '[';
+	opacity: 0;
+	position: relative;
+	left: -10%;
+	transition: 0.25s ease-in-out;
+}
+
+.links a:after {
+	content: ']';
+	opacity: 0;
+	position: relative;
+	right: -10%;
+	transition: 0.25s ease-in-out;
+}
+.links a:hover {
+	color: #e1b0c2;
+}
+.links a:hover:before {
+	opacity: 1;
+	left: -2%;
+}
+
+.links a:hover:after {
+	opacity: 1;
+	right: -2%;
+}
+.wrapper > div:hover > .links {
+	opacity: 1;
+	visibility: visible;
+}
