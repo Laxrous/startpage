@@ -1,111 +1,117 @@
 <!DOCTYPE html>
-
 <html>
-
-<!-- 
-	Multipurpose aesthetically appealing and partially forked adaptive startpage that displays a lot of useless information
--->
-
 <head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="icon" sizes="128x128" href="images/Logo.png" />
-	<link href="Stylesheet/style.css" rel="stylesheet" type="text/css" />
-	
+	<title>New Tab</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="Stylesheet/style2.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	
-	<title>&lrm;</title>
-
 </head>
-
 <body>
-
-	<div class="BG"></div>
-	
-	<div class="Main-container">
-		
-		<div class="Time-container">
-			<p class="TimeHMS" id="Time"></p>
-			<p class="TimeWeek" id="Week"></p>
-			<p class="TimeDate" id="Date"></p>
+	<div id="bg"></div>
+	<div class="main">
+		<div class="searchbar">
+			<input id="search" type="text" autocomplete="off" spellcheck="off"/>
+			<span class="bar"></span>
 		</div>
-		
-		<div class="Search-container">
-			<input type="text" autocomplete="off" class="SearchBar" id="Search" spellcheck="false" onfocus="blurBG()" oninput="blurBG()" onblur="unblurBG()" />
-			<span class="Bar"></span>
+		<div class="wrapper">
+			<div id="sooyoung">
+				<div class="links">
+					<h1>Main</h1>
+					<a href="https://twitter.com">Twitter</a>
+					<a href="https://youtube.com">YouTube</a>
+					<a href="https://instagram.com">Instagram</a>
+					<a href="https://facebook.com">Facebook</a>
+					<a href="https://docs.google.com/spreadsheets/d/1Sm6oFSANDdB6otlwxgMRAXuMVLYuzDhN-M3-i4mLOk8/edit">SNSD Variety</a>
+				</div>
+			</div>
+			<div id="jessica">
+				<div class="links">
+					<h1>Reddit</h1>
+					<a href="https://reddit.com">Home</a>
+					<a href="https://reddit.com/r/all">/r/all</a>
+					<a href="https://reddit.com/r/kpop">/r/kpop</a>
+					<a href="https://reddit.com/r/snsd">/r/snsd</a>
+					<a href="https://reddit.com/r/leagueoflegends">/r/league</a>
+					<a href="https://reddit.com/r/nba">/r/nba</a>
+					<a href="https://reddit.com/r/kdrama">/r/kdrama</a>
+					<a href="https://reddit.com/r/koreanvariety">/r/kvariety</a>
+					<a href="https://reddit.com/r/starwars">/r/starwars</a>
+				</div>
+			</div>
+			<div id="yuri">
+				<div class="links">
+					<h1>School</h1>
+					<a href="https://myniu.niu.edu">MyNIU</a>
+					<a href="https://webcourses.niu.edu">Blackboard</a>
+				</div>
+			</div>
+			<div id="tiffany">
+				<div class="links">
+					<h1>Music</h1>
+					<a href="https://open.spotify.com">Spotify</a>
+					<a href="https://www.youtube.com/watch?v=c9fSp5we6w4&index=1&list=PL5x3_U8jn5qlzRVgW8EptPe0IGRBt1UWK">YouTube Playlist</a>
+					<a href="https://pandroa.com">Pandora</a>
+					<a href="https://www.last.fm/user/Laxfany">last.fm</a>
+				</div>
+			</div>
+			<div id="seohyun">
+				<div class="links">
+					<h1>Email</h1>
+					<a href="https://gmail.com">Gmail</a>
+					<a href="https://mail.aol.com">AOL Mail</a>
+					<a href="https://o365.niu.edu">Outlook</a>
+				</div>
+			</div>
+			<div id="taeyeon">
+				<div class="links">
+					<h1>Kpop</h1>
+					<a href="https://ichart.instiz.net/">iChart</a>
+					<a href="http://kenterzone.tumblr.com/">KEnterZone</a>
+					<a href="http://www.k-popstream.com/">K-popstream</a>
+					<a href="https://reddit.com/r/kpop">/r/kpop</a>
+					<a href="https://reddit.com/r/snsd">/r/snsd</a>
+					<a href="https://docs.google.com/spreadsheets/d/1Sm6oFSANDdB6otlwxgMRAXuMVLYuzDhN-M3-i4mLOk8/edit">SNSD Variety</a>
+				</div>
+			</div>
+			<div id="hyoyeon">
+				<div class="links">
+					<h1>KDramas & KVariety</h1>
+					<a href="http://mydramalist.com">MyDramaList</a>
+					<a href="https://reddit.com/r/kdrama">/r/kdrama</a>
+					<a href="https://reddit.com/r/koreanvariety">/r/kvariety</a>
+					<a href="https://kissasian.ch">KissAsian</a>
+					<a href="https://watchasian.co/">DramaCool</a>
+					<a href="https://ondramanice.io/">DramaNice</a>
+					<a href="http://fastdrama.co/">FastDrama</a>
+					<a href="https://kshow123.net">KShow123</a>
+					<a href="http://ikshow.net/">iKShow</a>
+					<a href="https://kshowonline.com">KShowOnline</a>
+					<a href="https://ondemandkorea.com">OnDemandKorea</a>
+					<a href="https://docs.google.com/spreadsheets/d/1Sm6oFSANDdB6otlwxgMRAXuMVLYuzDhN-M3-i4mLOk8/edit">SNSD Variety</a>
+				</div>
+			</div>
+			<div id="sunny">
+				<div class="links">
+					<h1>Gaming</h1>
+					<a href="https://www.twitch.tv/directory/following">Twitch</a>
+					<a href="https://reddit.com/r/leagueoflegends">League of Legends</a>
+					<a href="https://na.op.gg">OP.GG</a>
+					<a href="https://probuilds.net">ProBuilds</a>
+					<a href="https://reddit.com/r/ACPocketCamp">Animal Crossing</a>
+					<a href="https://reddit.com/r/NBAForums">NBA Live Mobile</a>
+					<a href="http://store.steampowered.com/">Steam</a>
+				</div>
+			</div>
+			<div id="yoona">
+				<div class="links">
+					<h1>Chats</h1>
+					<a href="https://groupme.com">GroupMe</a>
+					<a href="https://discordapp.com">Discord</a>
+				</div>
+			</div>
 		</div>
-		
-		<div class="Link-container">
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/a.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="https://www.youtube.com/" class="Link">YouTube</a>
-					<a href="https://en.wikipedia.org/wiki/Main_Page" class="Link">Wikipedia</a>
-					<a href="https://twitter.com/" class="Link">Twitter</a>
-					<a href="https://inbox.google.com/" class="Link">Inbox</a>
-					<a href="https://drive.google.com/drive/my-drive" class="Link">Drive</a>
-				</div>
-			</div>
-			
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/b.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="https://play.google.com/music" class="Link">Play Music</a>
-					<a href="https://soundcloud.com/you/collection" class="Link">SoundCloud</a>
-					<a href="https://www.youtube.com/playlist?list=PLQROaTQABfcPFa5alQM0KuBi0SrqS_-pV" class="Link">YT Playlist</a>
-				</div>
-			</div>
-			
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/c.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="https://www.reddit.com/" class="Link">Frontpage</a>
-					<a href="https://www.reddit.com/me/m/aestheics" class="Link">m/Aestheics</a>
-					<a href="https://www.reddit.com/me/m/dedicated_game_weeb/" class="Link">m/Dedicated</a>
-					<a href="https://www.reddit.com/me/m/memetics" class="Link">m/Memes</a>
-					<a href="https://www.reddit.com/user/TheProtagonists/saved/" class="Link">Saved</a>
-				</div>
-			</div>
-			
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/d.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="http://www.deviantart.com/browse/all/" class="Link">deviantART</a>
-					<a href="http://www.pixiv.net/" class="Link">pixiv</a>
-					<a href="http://www.pixivision.net/" class="Link">pixivision</a>
-					<a href="http://tvtropes.org/" class="Link">TV Tropes</a>
-				</div>
-			</div>
-			
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/e.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="https://wall.alphacoders.com/" class="Link">WP Abyss</a>
-					<a href="https://alpha.wallhaven.cc/search?categories=110&purity=100&sorting=date_added&order=desc" class="Link">Wallheaven</a>
-					<a href="http://safebooru.org/index.php?page=post&s=list" class="Link">Safebooru</a>
-					<a href="http://konachan.net/post" class="Link">Konachan</a>
-					<a href="https://yande.re/" class="Link">Yande.re</a>
-					<a href="http://waifu2x.booru.pics/" class="Link">waifu2x</a>
-				</div>
-			</div>
-			
-			<div class="Category-container" onmouseover="blurBG()" onmouseout="unblurBG()">
-				<img src="Images/f.png" class="Icons"/>
-				<div class="Link-index">
-					<a href="http://store.steampowered.com/" class="Link">Steam</a>
-					<a href="http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/" class="Link">KanColle</a>
-					<a href="http://game.granbluefantasy.jp/" class="Link">Granblue</a>
-					<a href="https://myanimelist.net/animelist/TheProtagonists" class="Link">Anime List</a>
-					<a href="http://kissanime.ru/BookmarkList" class="Link">Kissanime</a>
-				</div>
-			</div>
-		</div>
-	
 	</div>
-
-	<script src="Script/jquery.simpleWeather.min.js"></script>
-	<script src="Script/main.js"></script>
-	<script src="Script/search.js"></script>
-	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-	
+	<script type="text/javascript" src="Script/main.js"></script>
+	<script type="text/javascript" src="Script/search.js"></script>
 </body>
+</html>
