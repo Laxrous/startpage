@@ -6,7 +6,7 @@
 	user-select: none;
 }
 body {
-	background: url(../Images/default.jpg);
+	background: url(../img/default.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -14,7 +14,7 @@ body {
 }
 #bg {
 	position: absolute;
-	background-image: url(../Images/default.jpg);
+	background-image: url(../img/default.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
