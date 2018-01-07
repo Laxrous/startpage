@@ -1,34 +1,43 @@
 //Mostly forked one-search-bar-multiple-search function 
 
 var searchInput = document.getElementById('search');
-var regex1 = new RegExp("^[^(^(http|https)://)]?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$");
-var regex2 = new RegExp("^(^(http|https)://)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$");
 
 function search(query){
     if(query.substr(0,2) == "yt"){
         query = query.substr(3);
-        window.location = "https://www.youtube.com/results?search_query=" + query;
+        window.location = "http://www.youtube.com/results?search_query=" + query;
     }
     else if(query.substr(0,3) == "/r/"){
         query = query.substr(3);
-        window.location = "https://www.reddit.com/r/" + query;
+        window.location = "http://www.reddit.com/r/" + query;
     }
     else if(query.substr(0,3) == "mdl"){
         query = query.substr(4);
-        window.location = "https://mydramalist.com/search?q=" + query;
+        window.location = "http://mydramalist.com/search?q=" + query;
     }
     else if(query.substr(0,2) == "ka"){
         query = query.substr(3);
         window.location = "http://kissasian.ch/Search/Drama/" + query;
     }
-    else if(regex1.test(query)){
+    else if(query.substr(0,4) == "opgg"){
+        query = query.substr(5);
+        window.location = "http://na.op.gg/summoner/userName=" + query;
+    }
+    else if(query.substr(0,2) == "pb"){
+        query = query.substr(3);
+        window.location = "http://www.probuilds.net/champions/details/" + query;
+    }
+    else if(/\s/.test(query)){
+        window.location="http://www.google.com/#q=" + query;
+    }
+    else if(query.indexOf("^[a-zA-Z0-9\-\.]+\.(com|org|net|edu|ca|ch|co|eu|fm|gg|jp|kr|uk|xyz|)$") == 0) {
         window.location = "http://" + query;
     }
-    else if(regex2.test(query)){
+    else if(query.indexOf("http://") == 0 || query.indexOf("https://") == 0) {
         window.location = query;
     }
     else {
-        window.location="https://www.google.com/#q=" + query;
+    	window.location="http://www.google.com/#q=" + query;
     }
 }
 
