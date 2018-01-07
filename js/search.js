@@ -1,6 +1,7 @@
 //Mostly forked one-search-bar-multiple-search function 
 
 var searchInput = document.getElementById('search');
+var nohttp = /^([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+.*)$/;
 
 function search(query){
     if(query.substr(0,2) == "yt"){
@@ -10,6 +11,10 @@ function search(query){
     else if(query.substr(0,3) == "/r/"){
         query = query.substr(3);
         window.location = "http://www.reddit.com/r/" + query;
+    }
+    else if(query.substr(0,3) == "twt"){
+        query = query.substr(4);
+        window.location = "http://twitter.com/search?q=" + query;
     }
     else if(query.substr(0,3) == "mdl"){
         query = query.substr(4);
@@ -28,9 +33,9 @@ function search(query){
         window.location = "http://www.probuilds.net/champions/details/" + query;
     }
     else if(/\s/.test(query)){
-        window.location="http://www.google.com/#q=" + query;
+        window.location = "http://www.google.com/#q=" + query;
     }
-    else if(query.indexOf("^[a-zA-Z0-9\-\.]+\.(com|org|net|edu|ca|ch|co|eu|fm|gg|jp|kr|uk|xyz|)$") == 0) {
+    else if(nohttp.test(query)) {
         window.location = "http://" + query;
     }
     else if(query.indexOf("http://") == 0 || query.indexOf("https://") == 0) {
